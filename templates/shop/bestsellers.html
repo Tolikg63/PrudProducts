@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for category in categories %}
+{% if category.id == 2 or category.id == 3 or category.id == 4 %}
+    <ul>
+        <li>{{ category.title }}</li>
+    </ul>
+{% endif %}
+{% endfor %}
+{% endblock %}

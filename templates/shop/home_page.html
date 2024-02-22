@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div class="card">
+    {% for category in categories %}
+    <a href={% url "category_dishes" category.id %}>
+        <div class="card-item">
+            <div class="card-item__top">
+                {{ category.title }}
+            </div>
+            <div class="card-item__image">
+                {% if category.id == 1 %}
+                    <img src="{% static "assets/images/soup.jpg" %}">
+                {% elif category.id == 2 %}
+                    <img src="{% static "assets/images/dessert.jpg" %}">
+                {% elif category.id == 3 %}
+                    <img src="{% static "assets/images/seafood.jpg" %}">
+                {% elif category.id == 4 %}
+                    <img src="{% static "assets/images/pizza.jpg" %}">
+                {% elif category.id == 5 %}
+                    <img src="{% static "assets/images/sushi.jpg" %}">
+                {% elif category.id == 6 %}
+                    <img src="{% static "assets/images/bbq.jpg" %}">
+                {% elif category.id == 7 %}
+                    <img src="{% static "assets/images/appetizers.jpg" %}">
+                {% endif %}
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fira code;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #F54952;
+}
+
+.header-menu__inner {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header-menu__logo a {
+  color: #fff;
+  font-weight: 500;
+}
+.header-menu__logo a:hover {
+  color: #AE2D68;
+}
+
+.header-menu__nav ul {
+  display: flex;
+}
+.header-menu__nav ul li a {
+  color: #fff;
+  font-weight: 500;
+}
+.header-menu__nav ul li a:hover {
+  color: #AE2D68;
+}
+.header-menu__nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card-item__image {
+  height: 75%;
+  border-radius: 0 0 9px 9px;
+}
+.card-item__image img {
+  border-radius: 0 0 9px 9px;
+  width: 200px;
+  height: 147px;
+  filter: grayscale(60%);
+  transition: all 0.3s;
+}
+.card-item__image img:hover {
+  filter: grayscale(0);
+}
+
+.card {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card .card-item {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 2px 5px;
+  color: #fff;
+}
+.card .card-item .card-item__top {
+  height: 25%;
+  background-color: #F54952;
+  border-radius: 9px 9px 0 0;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.card .card-item .card-item__top:hover {
+  color: #AE2D68;
+}
+.card .card-item .card-item__info {
+  background-color: #AE2D68;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-item .card-item__info ul li {
+  font-size: 20px;
+}
+.card .card-item .card-item__bottom {
+  height: 25%;
+  background-color: #F54952;
+  border-radius: 0 0 9px 9px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.card .card-item .card-item__bottom button {
+  background-color: inherit;
+  border: none;
+  font-size: 15px;
+}
+.card .card-item .card-item__bottom button a {
+  color: #fff;
+}
+.card .card-item .card-item__bottom button a:hover {
+  color: #AE2D68;
+}/*# sourceMappingURL=style.css.map */

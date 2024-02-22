@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}{{ category.title }}{% endblock %}
+{% block content %}
+<div class="card">
+    {% for dish in dishes %}
+        <div class="card-item">
+            <div class="card-item__top">
+                {{ dish.title }}
+            </div>
+            <div class="card-item__info">
+                <ul>
+                    <li>Price: {{ dish.price }}</li>
+                    <li>Ccal: {{ dish.calories }}</li>
+                    <li>Weight: {{ dish.weight }}</li>
+                </ul>
+            </div>
+            <div class="card-item__bottom">
+                <button><a href="">Add to cart</a></button>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

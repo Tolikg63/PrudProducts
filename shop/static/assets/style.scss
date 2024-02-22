@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fira code;
+}
+
+$main_color: #F54952;
+$body_color: #AE2D68;
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $main_color;
+}
+
+.header-menu__inner {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.header-menu__logo {
+    a {
+        color: #fff;
+        font-weight: 500;
+        &:hover {
+            color: $body_color;
+        }
+    }  
+}
+
+.header-menu__nav {
+    ul {
+        display: flex;
+        li {
+            a {
+                color: #fff;
+                font-weight: 500;
+                &:hover {
+                    color: $body_color;
+                }
+            }
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.card-item__image {
+    height: 75%;
+    border-radius: 0 0 9px 9px;
+    img {
+        border-radius: 0 0 9px 9px;
+        width: 200px;
+        height: 147px;
+        filter: grayscale(60%);
+        transition: all .3s;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.card {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card-item {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 2px 5px;
+        color: #fff;
+        .card-item__top {
+            height: 25%;
+            background-color: $main_color;
+            border-radius: 9px 9px 0 0;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            &:hover {
+                color: $body_color;
+            }
+        }
+        .card-item__info {
+            background-color: $body_color;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul li {
+                font-size: 20px;
+            }
+            // &::after {
+            //     content: '';
+            //     display: inline-block;
+            //     height: 1px;
+            //     width: 100%;
+            //     background-color: $main_color;
+            // }
+        }
+        .card-item__bottom {
+            height: 25%;
+            background-color: $main_color;
+            border-radius: 0 0 9px 9px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            button {
+                background-color: inherit;
+                border: none;
+                font-size: 15px;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $body_color;
+                    }
+                }
+            }
+        }
+    }
+}
